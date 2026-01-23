@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCHALLA Gérard - Développeur Web & Applications</title>
+    <meta name="description" content="Portfolio de TCHALLA Gérard, Développeur Web & Applications. Découvrez mes projets et compétences en développement web.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Écran de chargement -->
+    <div class="loading" id="loading">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Barre de navigation -->
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="" class="logo"><img src="img/renseignements-personnels.png" alt=""><h1>𝐌𝐲𝐏𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨</h1></a>
+            <ul class="menu">
+                <li><a href="Info_portfolio/Apropos.html" class="nav-link"> <b>À propos</b></a></li>
+                <li><a href="Info_portfolio/Competence.html" class="nav-link"><b>Compétences</b></a></li>
+                <li><a href="Info_portfolio/MesProjet.html" class="nav-link"><b>Projets</b></a></li>
+                <li><a href="Info_portfolio/contact.html" class="nav-link"><b>Contact</b></a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Section page d'accueil -->
+    <header class="hero" id="home">
+        <div class="like-container">
+    <!-- Bouton like fixe -->
+<div class="like-container">
+    <button id="likeButton" class="like-button" aria-label="J'aime ce portfolio">
+        <i class="far fa-heart"></i>
+        <span id="likeCount">0</span> 𝐿𝑖𝑘𝑒
+    </button>
+</div>
+</div>
+        <div class="hero-content">
+            <img src="img/profile.jpg" alt="TCHALLA Obafemi Gérard" class="profile-img">
+            <h1 class="fade-in">𝐓𝐂𝐇𝐀𝐋𝐋𝐀 𝐎𝐛𝐚𝐟𝐞𝐦𝐢 (𝐆é𝐫𝐚𝐫𝐝)</h1>
+            <p class="fade-in">𝑫é𝒗𝒆𝒍𝒐𝒑𝒑𝒆𝒖𝒓 𝑾𝒆𝒃 & 𝑨𝒑𝒑𝒍𝒊𝒄𝒂𝒕𝒊𝒐𝒏𝒔</p>
+            <div class="hero-buttons fade-in">
+                <a href="Info_portfolio/contact.html" class="btn">𝐂𝐨𝐧𝐭𝐚𝐜𝐭𝐞𝐳-𝐦𝐨𝐢</a>
+                <a href="Info_portfolio/MesProjet.html" class="btn btn-outline">𝐌𝐞𝐬 𝐏𝐫𝐨𝐣𝐞𝐭𝐬</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/gerardtchalla" target="_blank" class="social-link github" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/gerard-tchalla-4b2b4b2b4/" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://tiktok.com/@Obafemi_x2" target="_blank" class="social-link tiktok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Défiler vers le bas">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#" class="logo"><h1>*✦･ﾟ TG ✦･ﾟ*</h1></a>
+                <p>𝙲𝚛é𝚊𝚝𝚒𝚘𝚗 𝚍𝚎 𝚜𝚘𝚕𝚞𝚝𝚒𝚘𝚗𝚜 𝚠𝚎𝚋 𝚒𝚗𝚗𝚘𝚟𝚊𝚗𝚝𝚎𝚜 𝚎𝚝 𝚙𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚝𝚎𝚜.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                <a href="Info_portfolio/Competence.html">Compétences</a><br>
+<a href="Info_portfolio/MesProjet.html">Projets</a><br>
+<a href="Info_portfolio/contact.html">Contact</a><br>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> 𝚐𝚎𝚛𝚊𝚛𝚍𝚝𝚌𝚑𝚊𝚕𝚕𝚊𝟼@𝚐𝚖𝚊𝚒𝚕.𝚌𝚘𝚖</p>
+                <p><i class="fas fa-phone"></i>+𝟸𝟸𝟾 𝟿𝟷 𝟷𝟾 𝟼𝟼 𝟹𝟽</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span>𝚃𝙲𝙷𝙰𝙻𝙻𝙰  𝙾𝚋𝚊𝚏𝚎𝚖𝚒 𝙶é𝚛𝚊𝚛𝚍. <br> 𝚃𝚘𝚞𝚜 𝚍𝚛𝚘𝚒𝚝𝚜 𝚛é𝚜𝚎𝚛𝚟é𝚜. </p>
+            <div class="footer-social">
+                <a href="https://github.com/gerardtchalla" target="_blank" class="social-link github" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gerard-tchalla-4b2b4b2b4/" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://facebook.com/TCHALLAobfemi" target="_blank" class="social-link facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://tiktok.com/@Obafemi_x2" target="_blank" class="social-link tiktok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>

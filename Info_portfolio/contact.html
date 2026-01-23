@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Contactez-moi</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="logo"><img src="../img/dossier-portefeuille.png" alt=""><h1>𝐌𝐲𝐏𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨</h1></a>
+            <ul class="menu">
+                <li><a href="../index.html" class="nav-link"> <b>Accueil</b></a></li>
+                <li><a href="Apropos.html" class="nav-link"> <b>À propos</b></a></li>
+                <li><a href="Competence.html" class="nav-link"><b>Compétences</b></a></li>
+                <li><a href="MesProjet.html" class="nav-link"><b>Projets</b></a></li>
+                <li><a href="contact.html" class="nav-link"><b>Contact</b></a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+    <!-- Section Contact -->
+    <section id="contact" class="section bg-light">
+        <h2 class="section-title">Contactez-moi</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:gerardtchalla6@gmail.com">gerardtchalla6@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <a href="tel:+22891186637">+22891186637</a><br>
+                        <a href="tel:+22897895009">+22897895009</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Localisation</h3>
+                        <p>Lomé, Togo</p>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63428.57083576123!2d1.2000000000000028!3d6.128064099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e3f6f0ca5a5f%3A0x7fd3e7ccd9e2d1f0!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2stg!4v1640000000000!5m2!1sfr!2stg" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                aria-label="Carte de localisation de Lomé, Togo">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Réseaux sociaux</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Mr-Obafemi6" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/gerard-tchalla-4a0b2b294" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://facebook.com/TCHALLAobfemi" target="_blank" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://tiktok.com/@Obafemi_x2" target="_blank" class="social-link" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> TCHALLA Gérard. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Mettre à jour l'année du copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

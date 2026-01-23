@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En savoir plus sur TCHALLA Obafemi (Gérard), Développeur Web & Applications. Découvrez mon parcours et mes compétences.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>À propos - TCHALLA Gérard</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="logo"><img src="../img/dossier-portefeuille.png" alt=""><h1>𝐌𝐲𝐏𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨</h1></a>
+            <ul class="menu">
+                <li><a href="../index.html" class="nav-link"> <b>Accueil</b></a></li>
+                <li><a href="Apropos.html" class="nav-link"> <b>À propos</b></a></li>
+                <li><a href="Competence.html" class="nav-link"><b>Compétences</b></a></li>
+                <li><a href="MesProjet.html" class="nav-link"><b>Projets</b></a></li>
+                <li><a href="contact.html" class="nav-link"><b>Contact</b></a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <main class="main-content">
+        
+        <!-- Section À propos -->
+        <section id="about" class="section"><br><br>
+        <h1 class="section-title">À propos de moi</h1>
+            <div class="about-content">
+                
+                <div class="about-text">
+                    <p>Je suis un développeur web passionné par la création d'expériences numériques exceptionnelles. Avec une solide expertise en développement front-end et back-end, je m'efforce de créer des solutions web innovantes et performantes.</p>
+                    <p>Développeur web passionné par la création d’applications performantes et bien structurées. Je maîtrise le développement front-end et back-end et je m’investis pleinement dans chaque projet afin de proposer des solutions efficaces et évolutives. Toujours en apprentissage, je cherche à relever de nouveaux défis techniques.</p> 
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h3>Formation</h3>
+                                <p>Développement Web & Applications</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h3>Expérience</h3>
+                                <p>+3 ans en développement web</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="../index.html" class="logo">TG</a>
+                <p>Création de solutions web innovantes et performantes.</p>
+            </div>
+            <div class="footer-links">
+            
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> TCHALLA Obafemi (Gérard). Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Mise à jour de l'année du copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = document.getElementById('currentYear');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+
+            // Gestion du menu mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.querySelector('.menu');
+            
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function() {
+                    menu.classList.toggle('active');
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-times');
+                        icon.classList.toggle('fa-bars');
+                    }
+                });
+            }
+
+            // Gestion du thème
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+            
+            if (themeToggle && themeIcon) {
+                // Vérifier le thème préféré de l'utilisateur
+                const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+                const currentTheme = localStorage.getItem('theme');
+                
+                // Appliquer le thème sauvegardé ou le préféré
+                const applyTheme = (theme) => {
+                    document.documentElement.setAttribute('data-theme', theme);
+                    if (theme === 'dark') {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                    localStorage.setItem('theme', theme);
+                };
+
+                if (currentTheme) {
+                    applyTheme(currentTheme);
+                } else if (prefersDarkScheme.matches) {
+                    applyTheme('dark');
+                }
+
+                // Basculer entre les thèmes
+                themeToggle.addEventListener('click', function() {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+                });
+
+                // Mettre à jour le thème si les préférences système changent
+                prefersDarkScheme.addEventListener('change', e => {
+                    if (!localStorage.getItem('theme')) {
+                        applyTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+            }
+
+            // Gestion du bouton de retour en haut
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                });
+                
+                backToTop.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ 
+                        top: 0, 
+                        behavior: 'smooth' 
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
