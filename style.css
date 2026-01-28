@@ -817,8 +817,75 @@ section {
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
+}
+
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.phone-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.phone-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.phone-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: var(--primary-color);
+}
+
+.email-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.email-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.email-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.email-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: var(--primary-color);
+}
+
+.location-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
 }
 
 .contact-icon {
@@ -1661,3 +1728,8 @@ main.container {
 [data-theme="dark"] .whatsapp-float:hover {
     background: rgba(18, 140, 126, 0.7);
 }
+
+
+
+
+

@@ -168,4 +168,27 @@ const menuToggle = document.getElementById('menuToggle');
     animateOnScroll(); // Exécuter une fois au chargement
 
 
+//Email
+function sendEmail(form) {
+    emailjs.send("service_1s5qsgc", "template_wagzsjb", {
+        from_name: form.name.value,
+        from_email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+    })
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        document.getElementById('success-message').style.display = 'block';
+        form.reset();
+        setTimeout(() => {
+            document.getElementById('success-message').style.display = 'none';
+        }, 5000);
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+    });
+    return false;
+}
+
+
 
