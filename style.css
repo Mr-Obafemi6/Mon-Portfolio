@@ -80,6 +80,97 @@ Effet Glace / Verre
 
 
 
+/* Styles pour la section À propos */
+.expertise-intro {
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.expertise-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.expertise-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.about-content p {
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 0.3rem;
+}
+
+.detail-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+}
+
+.detail-item p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.detail-item .institution {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* Thème sombre */
+[data-theme="dark"] .detail-item {
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .detail-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 /* ===================================
    #VARIABLES
    Définition des variables CSS globales
@@ -104,8 +195,8 @@ Effet Glace / Verre
 }
 
 /* ===================================
-   #THEME SOMBRE
-   Surcharge des variables pour le thème sombre
+    #THEME SOMBRE
+    Surcharge des variables pour le thème sombre
    =================================== */
 [data-theme="dark"] {
     /* Couleurs principales */
@@ -117,8 +208,8 @@ Effet Glace / Verre
     --nav-bg: rgba(17, 24, 39, 0.95);
     
     /* Effets */
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 
-              0 2px 4px -1px rgba(0, 0, 0, 0.15);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25),
+            0 2px 4px -1px rgba(0, 0, 0, 0.15);
 }
 
 /* Appliquer le thème sombre à tous les éléments */
@@ -145,14 +236,14 @@ Effet Glace / Verre
 
 [data-theme="dark"] .btn,
 [data-theme="dark"] .btn-outline {
-    background-color: var(--primary-color);
+    border:1px solid var(--text-color) ;
     color: white;
 }
 
 [data-theme="dark"] .btn-outline {
     background-color: transparent;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
 }
 
 /* ===================================
@@ -476,7 +567,6 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary-color);
     margin-bottom: 2rem;
     box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
     transition: var(--transition);
@@ -679,9 +769,9 @@ section {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: var(--text-color);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.18);
     border-radius: 12px;
     font-weight: 500;
     cursor: pointer;
@@ -695,21 +785,20 @@ section {
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
+    
     transform: translateY(-2px);
 }
 
 .btn-outline {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(73, 69, 69, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.18);
     color: var(--text-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-outline:hover {
-    background-color: var(--primary-color);
-    color: white;
+    color: rgb(2, 6, 212);
 }
 
 /* Contact Section */
@@ -903,10 +992,10 @@ footer {
     background: rgba(255, 255, 255, 0.5) !important;
     border: 1px solid rgba(255, 255, 255, 0.4);
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 20px;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1409,7 +1498,7 @@ main.container {
 
 /* Menu de navigation en verre */
 .navbar {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(2, 11, 97, 0.1) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
@@ -1418,7 +1507,7 @@ main.container {
 
 /* Style pour le menu déroulant sur mobile */
 .menu {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(2, 20, 119, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -1529,4 +1618,46 @@ main.container {
 
 [data-theme="dark"] .like-button:hover {
     background: rgba(17, 24, 39, 0.3);
+}
+
+/* Style du bouton WhatsApp fixe en haut */
+/* Style du bouton WhatsApp fixe en haut */
+.whatsapp-float {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(37, 211, 102, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #FFF;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    /* Réinitialisation des styles de bouton */
+    appearance: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Pour le thème sombre */
+[data-theme="dark"] .whatsapp-float {
+    background: rgba(37, 211, 102, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .whatsapp-float:hover {
+    background: rgba(18, 140, 126, 0.7);
 }
