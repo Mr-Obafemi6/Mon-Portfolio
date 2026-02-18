@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../img/dossier-portefeuille.png">
+    
+    <!-- Chargez d'abord la bibliothèque EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Puis initialisez EmailJS -->
+    <script>
+        (function() {
+            emailjs.init("mzMc7-Ya4W3h1nn1K");
+        })();
+    </script>
+    
+    <title>Contactez-moi</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar fixed-top">
+        <div class="nav-container">
+            <a class="logo"><img src="data:image/png;base64,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" alt="new-contact"><h1>𝐌𝐲𝐏𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨</h1></a>
+            <ul class="menu">
+                <li><a href="../index.html" class="nav-link"> <b>Accueil</b></a></li>
+                <li><a href="Apropos.html" class="nav-link"> <b>À propos</b></a></li>
+                <li><a href="Competence.html" class="nav-link"><b>Compétences</b></a></li>
+                <li><a href="MesProjet.html" class="nav-link"><b>Projets</b></a></li>
+                <li><a href="contact.html" class="nav-link"><b>Contact</b></a></li>
+                <li><a href="../CV.html" class="nav-link"><b>CV</b></a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+    <!-- Section Contact -->
+    <section id="contact" class="section bg-light">
+        <h2 class="section-title">Contactez-moi</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item"><br>
+                    <div class="email-item">
+                        <img src="data:image/png;base64,
+                    iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEy0lEQVR4nO2ZbUwbZQDHL45M5vygycRkL0YFlWw9oHdFYSsr69uItBksIYwOwiC8KKwq4EAY8TYYsoG8CIOFCduCzmiTQbveNSC4q7p9chlkEo0fTIxrC2uPFzcXoC885sggdYP2bj1ajP0n/
+                    y9N7+nvd9fnuadXCAommGB8DsBEIdMVaB5VjBDWTPTOuFIwNy4TuCx7Y4FFGAss+wQLEwp09q4KNdsK+QNUKT8XYFAIFOj8VQ7HUQXIDUsS6jTHxwI2tcgFTlsecmO6KjrG/+DVgjeoPPS2JUHACnpFEWEssB1BRmeOo+F+gZ/6EGk2SwQLvoI/JiIWuGY+QE6vGThoittky0F+4Rrc/EhtOcgIwNI2cgo/0wk/b1UhE2sNb37YaTW/
+                    lTN4cFEUak1Hrf6CpwoQEuIyVD7ys9/g8zmGny5B2lhNRDnqpPKRm1Ml/OqpkzGiexi65X5ZVJjtGCyhSmMwKhcZpZfPVc68kVP4mVo03CITuJiCT5UgXUwmnxlDn7Ed5V9yF6G4hqczqUZ+YgJvPYyY7tfxXmQ7Pr3uWzOQ8TWBB9/v2jE/DM9PlfGBebfHJe8W0EAboPUWBwmfdhhhQPfvc9FgXPL4HdeaiZrWJTzQpG2wG3mmJQG6c7ooYFWhbt95gZMqid4GrcfYjbx4d/
+                    jlXoPBvbqYxb3LpBrphtZr7Ea4akWBh31wIXoCqJOehtZr7CR8xZOAwwi3sRnvhXwj4KrJVT1/eP1Ah5E35lGAjEoKlMBbpd/Mev1AOwlPehKYJXdGBErgtWLCxURg3pMAIHc+GyiBbYXD4H8hMOlJYO6HqNcDJRBRRCz8xyexhtEk7vOyjLYHSuDt4z0mBgK8ytXg717jg1pc9qBJk7YJ4jiNvWWbee/pnJ4E3q1v0DMQgONWgh8ZfhNk6RRA0Z8CWgziC1wLqM/Ud3u7AjXtFSqvAwEAPWU38u4sgduNMOgfEIIU7YFFeLqHdQpnx0DCDq7g61sqXo4s1rs8wUcexZ0YiTF7mucwwvU0/
+                    AwZDWpw+TK4eyuuyi0kKfL58SBGYiHJlT0Wb2c/p7b1OuNBAQlv/21YYM/TJa8Iv9QTuGzUFwmMxELSsY4xb/BbC78DNZ99hLIavA6XjnqCX74Serml+9vdW9nCdw3teSm/sfZ3JqtP2sedY2zHh3SDCa9kahUuJhKZOoWzjUjswS5mh3obt3dQtrkFl3yu0ipcqX2p4OCpVo/w4UWGBexTjNXNczkdhLhZyUDAXaROLx05axBjXxEJ4iuD8WGXSdGWHsMeYbshseYELr9Jv8f9GGVfKshqxkBYAbmiQMGpxk7Il9QTkhGmAr40u+t9sP2doX/Bp1Sf/xXyNRpN2sZjuv3jfpHozQWRav0i/
+                    L7yL6gi7CyrjeOqIUnRc5V6ucUfEoe+VoGMmlYT1omFcQLvJhF6EpfdZjMnnqS1hHTEYFjD39xdhr0Nh7RKRqsTm2Zola5zRGID5I/
+                    06kQRdbj01kG37cWTNrX/wOJZvzwkfBXydy4NCtEzuPTHHG2yg/WE1Skcn+DS61/iMv//yfdoNADacB4XH2nCxfpKXPZngTZ5NkurcNFXiN4EpmuVC/Rr5Vf3mxoICdFlSMymj4GCCSYYyNf8A50RcaYC8geEAAAAAElFTkSuQmCC" alt="google-logo" class="email-icon">
+                        <div class="email-content">
+                            <h3>Email</h3>
+                            <a href="mailto:gerardtchalla6@gmail.com" class="email-link">gerardtchalla6@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-item"><br><br>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <div class="phone-numbers">
+                            <div class="phone-item">
+                                <img src="data:image/png;base64,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" alt="whatsapp" class="phone-icon">
+                                <a href="https://wa.me/22891186637" class="phone-link">+22891186637</a>
+                            </div>
+                            <div class="phone-item">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEEUlEQVR4nO2aW4hVVRjHf+PoSCneZsq8gdqoUNhFNH3wTR8UHx1BByXKHnoyBSGCoii6UJMDIiFqDSqMN0QGBsULguCtCM0oEnOmqHSqqSamxqm8TCz4DmwW31p7nzNz2Gdt9w8Ww3DW3nv9v732+i5rQU5OTk5OTinUAs3At0AvcBFYC1RxH/Ak0A0MKK0dGEmGmQN0OcQX2tGsGmEWcDNGfKEdBoaTIR4FflKEbgXqgavKb3uBYWSAaUCnInBnZNGbAlxX+rSEboQpDmEfK8KMoTqUvrtC9Q6jHFPb91ZnAD8o12whMKqAfYqQA0B1zLX1jvXiQwKiQRGwP4H4OHe5mUA4aQ28rQS39hjwi3Wf28BCAuDPyKDvAY+UeJ8ngN8sIxyiwhlhDfjWIFfxxdb9rhEA31uDLnXaDpc3Hr3XZwTAPmvQnwyReNNeJQCWWYPuA8YNgfgvJb6oeKok148OfkPCa42rbFXEm6BqMgHxsrJ4VZf45r8ZhCdJjYeBfy0hjTHeoy0r4gvssMR87ZkFJj+4YfXvCFm8YaZEb1FRz+PmXavvz8ADBE6LJcokOg86+k4F/rH6byRwpkk0GBX1hqf/Nqvv78B4AucdS1Q/MNtTRLENtp3AGaOkt6c8OcIrVl+TUK0gcFYrLu45j0v8wurbFVogpNFuifpbyuUaC4A7Vv+vQl8PZgJ/WaLOe4olbymz5kzornG9IuptT3B0TOl/Fqgr8rlmRjUBB4EP5P/UOKwscqaOqGGyyEuKEa5L7bAUL1R4ps8dl313+EdrQObTmOvo/5CE0bYIU3pbF/OsZuW6pDFJWXlG4oHoYDo9sX+tfP8DjnK7Sb6KFZ+6EZ5VBnPFs9LXSHVJE9EDvCQu1CXeRJUvyN+KMUKzMphznnwBSaj6HIbokIVOEz9Prp9XSUaoVhZF007ElL9M/HA64RSPiqcSjVDjcHefyrfvYxXwq0d8j8flPaXsO5j2HikwGrjgKIROirm2TvYO+xO8eSp5Jox3GOE7eVtJUu9tsj4kER9nhNdJgVHAcWUwRtSahPeo86TbxRrBFaCVfU3QVvIBmerm93KgGcFEoaTlHZocRjCDeryMRohu7t6NxBap0Ojw+f1SL0x65iApDVYh978yPKNonnYctDLtc2A+5RFfqFxVTFltt8MIpnDykSMfGIx4s7GziAqjwRG8DMi549dK2EDVxN9OywMkYSKwR3J6zRDdEsgk2ZFeKd+5PaOSutxUWSqbrq4w+A/gfWB6Vt68Ro2kwa4T6IU3egRYIvVHU1PclAXxUcZKbbE3JjPsV7bfghcfZQLwpmSBPkNkUnwU4wlelL0En3hzhH85GaZKvv3WyGFsE1leli24Ys4uZYJhaQ8gJycnhyzwP5hEcDmbwsBJAAAAAElFTkSuQmCC" alt="phone" class="phone-icon">
+                                <a href="tel:+22897895009" class="phone-link">+22897895009</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-item"><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6klEQVR4nO2W204TURSG95OoHFpAAdtCS0/TGdoZepwWyqn0AUx8AL0z4cLYmmiKiaEC3vIYIryB8UK4JGrPnXNvvFpmTwuMdDAxMdmdZL5kJfvy+/dea2UjZGNj81/R+AKnZYtHPb5wofHbPS2z1dNSW+dKauNQi+dZNKooq9vOXm7nrJcrgsbvgJYpgJbeBjW1BWpyE9TEBijxdZC5/KnC5h1olFCzxUgvVxR72R3QeHNxZSUPMrsGcmwV5GhOFKM5Co3MzWcLoi6eMRdXuDWQWV0cpOUsSAwPIp0RZJqfJO2P1EzhBItr6b+Ix27EJToDYiQNIpWCbihxRn5gsXhqE9SkubgcHRYXw0kQgnEQAivQ8bIxYgGU5OZHLK4m7hBf5kFibosndPHuEgddHwudhegBsQBqYv1Cv3Uubyou0QbxEBaPQ9c/EPfGoLOwDG03c04sgLKyphk2y3Cfm4h3B+IdDwNtNw3tx5RGLIDM5jRTcSrVFw9icdwuA/HFqEE8Aq35MDRnQwqxACLDXwyLDwZUF+duxPV2oaHtwuIUtOZC0HwUhOZM4Bu5AJH0kdlm6Q+oUZwxiIehhcUfBqA57YeG0/uBWIBuOM2abpYrcdwurgju87747EB8xg+NqSUsD41xTxSRRPDHP93eLHqfu2iDeGhIvO5YhNq45xSRRvJxYx1vrPPnZukPqC6u97kfGtNY3KeL1ycWoD7uFr5PuMl/JTBtT4RquWnhTvEpHzQcXqhPYnEP1MbcQm1sbjQ+c1e0XRFHay74uXk9oKbiUHvgOhmZmzejOROINZzeg68eBi6n/HDp9MGXeQp+3ncd/Lg3T3Zg/4Wnz3fBWMhqPNt9DcZCVuNFqQLGQlbj5dv3YCxkNUqVfTAWshrlvSoYC1mNsh2AMHYA0tgBSGMHII0dgDR2ANJYPkBprypdyeMzshrlSvX4+gUq1WNkNV69OXSW9/Z/4cJnZEVK7/af4CLtYWOD7uY3pJBwC/g1ly0AAAAASUVORK5CYII=" alt="map-pin" class="location-icon">
+                    <div>
+                        <h3>Localisation</h3>
+                        <p>Lomé, Togo</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63428.57083576123!2d1.2000000000000028!3d6.128064099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e3f6f0ca5a5f%3A0x7fd3e7ccd9e2d1f0!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2stg!4v1640000000000!5m2!1sfr!2stg" 
+                                width="100%"
+                                height="250"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                aria-label="Carte de localisation de Lomé, Togo">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+        <form class="contact-form" id="contactForm" onsubmit="return sendEmail(this);">
+    <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" class="form-control" required autocomplete="name">
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" required autocomplete="email">
+    </div>
+    
+    <div class="form-group">
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" class="form-control" required autocomplete="off">
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" class="form-control" rows="5" required autocomplete="off"></textarea>
+    </div>
+    
+    <button type="submit" class="btn">Envoyer le message</button>
+    <p id="success-message" style="display:none; color:green;">Message envoyé avec succès !</p>
+</form>
+        </div>
+    </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer glass">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Réseaux sociaux</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Mr-Obafemi6" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/gerard-tchalla-4a0b2b294" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://facebook.com/TCHALLAobfemi" target="_blank" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://tiktok.com/@Obafemi_x2" target="_blank" class="social-link" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> TCHALLA Gérard. Tous droits réservés.</p>
+            </div>
+        </div>
+    <script src="../script.js"></script>
+    <script>
+        // Mettre à jour l'année du copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+    
+</footer>
+</body>
+</html>

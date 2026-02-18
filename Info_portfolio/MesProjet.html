@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mes projets - TCHALLA Gérard</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar fixed-top">
+        <div class="nav-container">
+            <a class="logo"><img src="../img/dossier-portefeuille.png" alt=""><h1>𝐌𝐲𝐏𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨</h1></a>
+            <ul class="menu">
+                <li><a href="../index.html" class="nav-link"> <b>Accueil</b></a></li>
+                <li><a href="Apropos.html" class="nav-link"> <b>À propos</b></a></li>
+                <li><a href="Competence.html" class="nav-link"><b>Compétences</b></a></li>
+                <li><a href="MesProjet.html" class="nav-link"><b>Projets</b></a></li>
+                <li><a href="contact.html" class="nav-link"><b>Contact</b></a></li>
+                <li><a href="../CV.html" class="nav-link"><b>CV</b></a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <main class="container">
+        <!-- Section Projets -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Mes Réalisations</h2>
+                <p class="section-subtitle">Découvrez une sélection de mes projets les plus significatifs</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../img/WhatsApp Image 2026-01-20 at 20.31.03.jpeg" alt="Site ecommerce" class="project-img">
+                        <div class="project-overlay">
+                            <!--lien du site-->
+                            <a href="#" class="btn btn-icon" aria-label="Voir le projet" target="_blank">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <!---lien github-->
+                            <a href="https://github.com/Mr-Obafemi6/Mon-Projet-PCHome" class="btn btn-icon" aria-label="Voir le code source" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>PCHome </h3>
+                        <p class="project-description">site complète de vente et livraison de pc en ligne .</p>
+                        <div class="project-meta">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <span class="project-date">Décembre,2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../img/WhatsApp Image 2026-01-20 at 20.46.1.jpeg" alt="Application de gestion" class="project-img">
+                        <div class="project-overlay">
+                            <!---lien vers le site--->
+                            <a href="https://portfolio-obafemi-tchalla-neon-one.vercel.app/" class="btn btn-icon" aria-label="Voir le projet" target="_blank">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <!--chemin github-->
+                            <a href="https://github.com/Mr-Obafemi6/Mon-Portfolio" class="btn btn-icon" aria-label="Voir le code source" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mon Portfolio</h3>
+                        <p class="project-description">Conception et développement d'un portfolio moderne et responsive pour mettre en valeur mes compétences et projets.</p>
+                        <div class="project-meta">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            
+                            </div>
+                            <span class="project-date">Janvier, 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <!--projet3-->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../img/gest.tâche.jpeg" alt="Application de gestion" class="project-img">
+                        <div class="project-overlay">
+                            <!---lien vers le site--->
+                            <a href="#" class="btn btn-icon" aria-label="Voir le projet" target="_blank">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <!--chemin github-->
+                            <a href="https://github.com/Mr-Obafemi6/Gestion-des-t-ches.git" class="btn btn-icon" aria-label="Voir le code source" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+
+                        </div>
+                    </div>
+                
+                    <div class="project-info">
+                        <h3>Gestion de tâche</h3>
+                        <p class="project-description">Application web de gestion de tâches collaborative avec tableaux Kanban, délais et notifications en temps réel.</p>
+                        <div class="project-meta">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Socket.IO</span>
+                            </div>
+                            <span class="project-date">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            
+        
+            
+        
+        </div>
+    </section>
+    </main>
+    
+    <script>
+        // Gestion du thème
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fonction pour basculer le thème
+            function toggleTheme() {
+                const html = document.documentElement;
+                const currentTheme = html.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                // Mettre à jour le thème
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                // Mettre à jour l'icône
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) {
+                    if (newTheme === 'dark') {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                }
+            }
+            
+            // Appliquer le thème sauvegardé ou le thème système
+            function applySavedTheme() {
+                const savedTheme = localStorage.getItem('theme') || 
+                                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', savedTheme);
+                
+                // Mettre à jour l'icône
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon && savedTheme === 'dark') {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
+            }
+            
+            // Ajouter l'écouteur d'événement sur le bouton
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+            
+            // Appliquer le thème au chargement
+            applySavedTheme();
+            
+            // Gestion du menu mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.querySelector('.menu');
+            
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function() {
+                    menu.classList.toggle('active');
+                    this.classList.toggle('active');
+                    
+                    // Changer l'icône du bouton
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (this.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+                
+                // Fermer le menu quand on clique sur un lien
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menu.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+    
+    <!-- Pied de page -->
+    <footer class="footer glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html" class="logo">TG</a>
+                    <p>Création de solutions web innovantes et performantes.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="Apropos.html">À propos</a>
+                    <a href="Competence.html">Compétences</a>
+                    <a href="MesProjet.html">Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> TCHALLA Obafemi (Gérard). Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mise à jour de l'année du copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = document.getElementById('currentYear');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
