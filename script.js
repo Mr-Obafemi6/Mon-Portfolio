@@ -1,3 +1,7 @@
+// Base de résolution des chemins (ex. images du modal) : le dossier de script.js,
+// quelle que soit la page (racine ou sous-dossier) qui charge ce script.
+const scriptBase = document.currentScript ? document.currentScript.src : window.location.href;
+
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
     const themeToggle = document.getElementById('themeToggle');
@@ -71,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     document.getElementById('assistantLauncher')?.addEventListener('click', () => setAssistant(true));
     document.getElementById('assistantClose')?.addEventListener('click', () => setAssistant(false));
-    document.querySelectorAll('.assistant-actions [data-target]').forEach(button => button.addEventListener('click', () => {
+    document.querySelectorAll('.assistant-actions [data-target], .assistant-actions [data-href]').forEach(button => button.addEventListener('click', () => {
+        if (button.dataset.href) { window.location.href = button.dataset.href; return; }
         document.getElementById(button.dataset.target)?.scrollIntoView({ behavior: 'smooth' });
         setAssistant(false);
     }));
@@ -88,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.project-details').forEach(button => button.addEventListener('click', () => {
         const project = projectData[button.dataset.project];
         if (!project || !modal) return;
-        document.getElementById('modalImage').src = project.image;
+        document.getElementById('modalImage').src = new URL(project.image, scriptBase).href;
         document.getElementById('modalImage').alt = `Capture de ${project.title}`;
         document.getElementById('modalLabel').textContent = project.label;
         document.getElementById('modalTitle').textContent = project.title;
