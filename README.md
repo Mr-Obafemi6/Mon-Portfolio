@@ -81,12 +81,13 @@ En cas d’échec, un lien `mailto:` de secours est proposé.
 Le déploiement est automatique : chaque push sur `main` déclenche le workflow
 `.github/workflows/deploy.yml` (build + publication sur GitHub Pages).
 
-1. Dans **Settings → Pages**, source = **GitHub Actions** (généralement activé
-   automatiquement au premier déploiement).
+1. **Une seule fois** : dans **Settings → Pages → Build and deployment**,
+   choisissez **Source = GitHub Actions**.
+   (Le workflow ne peut pas activer Pages lui-même : cela demande les droits admin.)
 2. Poussez sur `main` ; le site est publié sur
    `https://mr-obafemi6.github.io/Mon-Portfolio/`.
 3. Pour relancer manuellement : onglet **Actions → Déploiement GitHub Pages →
-   Run workflow**.
+   Re-run all jobs**.
 
 Le site utilise des chemins relatifs (`base: './'`), un `HashRouter` et un fichier
 `public/.nojekyll`, ce qui évite les erreurs de routes et de chemins sur GitHub Pages.
