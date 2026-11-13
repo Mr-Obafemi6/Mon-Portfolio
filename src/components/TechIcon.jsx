@@ -8,10 +8,11 @@ import {
   DiLaravel,
   DiMysql,
   DiPhp,
-  DiReact,
   DiSymfony,
   DiVisualstudio,
 } from 'react-icons/di'
+import { SiLaragon, SiReact, SiTailwindcss } from 'react-icons/si'
+import { TbBrandReactNative } from 'react-icons/tb'
 import { cn } from '../lib/styles'
 
 const icons = {
@@ -24,8 +25,11 @@ const icons = {
   github: DiGithubBadge,
   laravel: DiLaravel,
   symfony: DiSymfony,
-  react: DiReact,
+  react: SiReact,
+  'react-native': TbBrandReactNative,
   bootstrap: DiBootstrap,
+  tailwind: SiTailwindcss,
+  laragon: SiLaragon,
   vscode: DiVisualstudio,
 }
 
@@ -39,12 +43,14 @@ const colors = {
   github: 'currentColor',
   laravel: '#ff2d20',
   symfony: 'currentColor',
-  react: '#0891b2',
+  react: '#61dafb',
+  'react-native': '#61dafb',
   bootstrap: '#7952b3',
+  tailwind: '#06b6d4',
+  laragon: '#0e83cd',
   vscode: '#007acc',
   cpp: '#00599c',
   csharp: '#239120',
-  tailwind: '#06b6d4',
   vite: '#646cff',
   pwa: '#5a0fc8',
 }
@@ -52,7 +58,6 @@ const colors = {
 const monograms = {
   cpp: 'C++',
   csharp: 'C#',
-  tailwind: 'TW',
   vite: 'V',
   pwa: 'PWA',
 }

@@ -14,11 +14,13 @@ import SectionHeading from '../components/SectionHeading'
 import ServiceIcon from '../components/ServiceIcon'
 import SocialLinks from '../components/SocialLinks'
 import TechIcon from '../components/TechIcon'
-import { heroBadges, profile, services, stats } from '../data/site'
+import { heroBadges, profile, services, stats, technologies } from '../data/site'
 import { projects } from '../data/projects'
 import { asset } from '../lib/assets'
 import { btn, cn } from '../lib/styles'
 import { usePageMeta } from '../lib/usePageMeta'
+
+const techNames = Object.fromEntries(technologies.map((technology) => [technology.key, technology.name]))
 
 const heroLogos = [
   { tech: 'php', position: 'left-[7%] top-[24%]', delay: '0s', size: 'text-3xl' },
@@ -183,6 +185,19 @@ export default function Home() {
                 <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                   {service.description}
                 </p>
+                <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-gray-200/60 pt-3 dark:border-white/10">
+                  {service.techs.map((tech) => (
+                    <span
+                      key={tech}
+                      role="img"
+                      aria-label={techNames[tech] ?? tech}
+                      title={techNames[tech] ?? tech}
+                      className="grid h-8 w-8 place-items-center rounded-lg bg-white/75 text-lg shadow-sm ring-1 ring-black/5 dark:bg-white/10 dark:ring-white/10"
+                    >
+                      <TechIcon name={tech} colored />
+                    </span>
+                  ))}
+                </div>
               </article>
             </Reveal>
           ))}

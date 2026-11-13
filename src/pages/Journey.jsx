@@ -27,7 +27,7 @@ export default function Journey() {
       <PageHeader
         kicker="05 / Parcours"
         title="Mon évolution"
-        intro="Les étapes qui ont construit mon profil, des fondations du web aux applications de gestion, jusqu’à React."
+        intro="Les étapes qui ont construit mon profil, des fondations du web aux applications de gestion, jusqu’à React et React Native."
       />
 
       <section className="mx-auto w-full max-w-4xl px-5 pb-16 sm:px-8">

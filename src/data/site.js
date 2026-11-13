@@ -41,13 +41,15 @@ export const heroBadges = [
   { label: 'HTML', tech: 'html5' },
   { label: 'CSS', tech: 'css3' },
   { label: 'JavaScript', tech: 'javascript' },
+  { label: 'React', tech: 'react' },
+  { label: 'Tailwind CSS', tech: 'tailwind' },
   { label: 'PHP', tech: 'php' },
+  { label: 'Laravel', tech: 'laravel' },
   { label: 'MySQL', tech: 'mysql' },
   { label: 'Git', tech: 'git' },
   { label: 'GitHub', tech: 'github' },
   { label: 'PWA', tech: 'pwa' },
-  { label: 'Laravel', tech: 'laravel' },
-  { label: 'React · apprentissage', tech: 'react' },
+  { label: 'React Native · apprentissage', tech: 'react-native' },
   { label: 'Symfony · apprentissage', tech: 'symfony' },
 ]
 
@@ -55,56 +57,93 @@ export const services = [
   {
     title: 'Développement Web',
     icon: 'html5',
-    description: "Création d'interfaces web responsives avec HTML, CSS et JavaScript.",
+    description:
+      "Création de sites et d'interfaces web responsives avec React, HTML, CSS et JavaScript.",
+    techs: ['react', 'html5', 'css3', 'javascript'],
   },
   {
     title: 'Applications Web',
     icon: 'javascript',
-    description: "Développement d'expériences web interactives adaptées aux utilisateurs.",
+    description: "Développement d'applications web interactives en JavaScript et PHP.",
+    techs: ['javascript', 'php'],
   },
   {
     title: 'Applications de gestion',
     icon: 'clipboard',
     description: "Conception de solutions de gestion pour les besoins d'une organisation.",
+    techs: ['php', 'laravel', 'mysql'],
   },
   {
     title: 'Bases de données',
     icon: 'mysql',
-    description: 'Organisation et exploitation de données avec MySQL.',
+    description: 'Modélisation, organisation et exploitation des données avec MySQL.',
+    techs: ['mysql', 'laragon'],
   },
   {
     title: 'Interfaces responsives',
     icon: 'monitor',
     description: 'Interfaces claires et adaptables aux écrans mobiles, tablettes et desktop.',
+    techs: ['tailwind', 'bootstrap', 'react'],
   },
   {
     title: 'Versioning',
     icon: 'git',
     description: 'Suivi des évolutions de projet avec Git et partage sur GitHub.',
+    techs: ['git', 'github'],
   },
 ]
 
-export const technologies = [
-  { name: 'HTML5', key: 'html5', description: 'Structure des interfaces web.' },
-  { name: 'CSS3', key: 'css3', description: 'Mise en forme responsive.' },
-  { name: 'JavaScript', key: 'javascript', description: 'Interactions et logique côté client.' },
-  { name: 'PHP', key: 'php', description: 'Applications web côté serveur.' },
-  { name: 'MySQL', key: 'mysql', description: 'Données des applications de gestion.' },
-  { name: 'Bootstrap', key: 'bootstrap', description: 'Composants utilisés dans plusieurs projets.' },
-  { name: 'Laravel', key: 'laravel', description: 'Framework PHP pour applications web.' },
+export const techGroups = [
+  {
+    title: 'Frontend',
+    subtitle: 'Interfaces et expérience utilisateur',
+    items: [
+      { name: 'HTML5', key: 'html5', description: 'Structure sémantique des pages.' },
+      { name: 'CSS3', key: 'css3', description: 'Mise en forme et responsive.' },
+      { name: 'JavaScript', key: 'javascript', description: 'Interactions et logique côté client.' },
+      { name: 'React', key: 'react', description: 'Applications web par composants.' },
+      { name: 'Tailwind CSS', key: 'tailwind', description: 'Styles utilitaires et design system.' },
+      { name: 'Bootstrap', key: 'bootstrap', description: 'Composants d’interface prêts à l’emploi.' },
+    ],
+  },
+  {
+    title: 'Backend',
+    subtitle: 'Logique et services côté serveur',
+    items: [
+      { name: 'PHP', key: 'php', description: 'Logique serveur et API.' },
+      { name: 'Laravel', key: 'laravel', description: 'Framework PHP structuré (MVC).' },
+    ],
+  },
+  {
+    title: 'Base de données',
+    subtitle: 'Stockage et gestion des données',
+    items: [
+      { name: 'MySQL', key: 'mysql', description: 'Modélisation et requêtes SQL.' },
+      { name: 'Laragon', key: 'laragon', description: 'Environnement local Apache, PHP et MySQL.' },
+    ],
+  },
+  {
+    title: 'Outils',
+    subtitle: 'Développement et collaboration',
+    items: [
+      { name: 'Git', key: 'git', description: 'Gestion des versions.' },
+      { name: 'GitHub', key: 'github', description: 'Dépôts et collaboration.' },
+      { name: 'VS Code', key: 'vscode', description: 'Éditeur de code.' },
+    ],
+  },
 ]
 
-export const tools = [
-  { name: 'Git', key: 'git', description: 'Gestion des versions.' },
-  { name: 'GitHub', key: 'github', description: 'Hébergement des dépôts.' },
-  { name: 'VS Code', key: 'vscode', description: 'Éditeur utilisé pour développer.' },
-]
+/** Liste à plat, utilisée par le CV et les statistiques. */
+export const technologies = techGroups.flatMap((group) => group.items)
+
+export const tools = techGroups.find((group) => group.title === 'Outils').items
 
 export const learning = [
   {
-    name: 'React',
-    key: 'react',
-    description: 'Technologie étudiée progressivement, sans la présenter comme maîtrisée.',
+    name: 'React Native',
+    key: 'react-native',
+    description:
+      'Développement d’applications mobiles avec React, en progression continue et sans le présenter comme maîtrisé.',
   },
   {
     name: 'Symfony',
@@ -124,12 +163,23 @@ export const timeline = [
     detail: 'Des solutions concrètes pour les organisations',
     icon: 'layers',
   },
-  { label: 'En apprentissage', title: 'React', detail: 'Progression continue, sans présenter la techno comme maîtrisée', icon: 'react' },
+  {
+    label: 'Front-end moderne',
+    title: 'React & Tailwind CSS',
+    detail: 'Interfaces web par composants et styles utilitaires',
+    icon: 'react',
+  },
+  {
+    label: 'En apprentissage',
+    title: 'React Native',
+    detail: 'Applications mobiles, progression continue',
+    icon: 'react-native',
+  },
 ]
 
 export const stats = [
   { value: 6, label: 'Projets présentés' },
-  { value: 11, label: 'Technologies listées' },
+  { value: technologies.length, label: 'Technologies listées' },
   { value: 1, label: 'Formation identifiée' },
 ]
 

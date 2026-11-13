@@ -29,7 +29,7 @@ const principles = [
   {
     title: 'Apprentissage continu',
     description:
-      'Je consolide mes bases et j’explore progressivement de nouvelles technologies comme React et Symfony.',
+      'Je consolide mes bases et j’explore progressivement de nouvelles technologies comme React Native et Symfony.',
     icon: FiTrendingUp,
   },
 ]
@@ -69,8 +69,8 @@ export default function About() {
               </p>
               <p>
                 J’aime partir d’un besoin concret, structurer les données, puis construire une
-                interface claire qui rend le quotidien plus simple. React et Symfony font partie de
-                mes apprentissages actuels, que je présente avec transparence.
+                interface claire qui rend le quotidien plus simple. React Native et Symfony font
+                partie de mes apprentissages actuels, que je présente avec transparence.
               </p>
             </div>
 

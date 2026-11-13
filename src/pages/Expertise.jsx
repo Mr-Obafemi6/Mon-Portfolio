@@ -5,9 +5,11 @@ import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import ServiceIcon from '../components/ServiceIcon'
 import TechIcon from '../components/TechIcon'
-import { learning, services, stats, technologies, tools } from '../data/site'
+import { learning, services, stats, techGroups, technologies } from '../data/site'
 import { btn } from '../lib/styles'
 import { usePageMeta } from '../lib/usePageMeta'
+
+const techNames = Object.fromEntries(technologies.map((technology) => [technology.key, technology.name]))
 
 export default function Expertise() {
   usePageMeta(
@@ -35,6 +37,19 @@ export default function Expertise() {
                 <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                   {service.description}
                 </p>
+                <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-gray-200/60 pt-3 dark:border-white/10">
+                  {service.techs.map((tech) => (
+                    <span
+                      key={tech}
+                      role="img"
+                      aria-label={techNames[tech] ?? tech}
+                      title={techNames[tech] ?? tech}
+                      className="grid h-8 w-8 place-items-center rounded-lg bg-white/75 text-lg shadow-sm ring-1 ring-black/5 dark:bg-white/10 dark:ring-white/10"
+                    >
+                      <TechIcon name={tech} colored />
+                    </span>
+                  ))}
+                </div>
               </article>
             </Reveal>
           ))}
@@ -45,40 +60,41 @@ export default function Expertise() {
         <SectionHeading
           kicker="03 / Boîte à outils"
           title="Technologies que j’utilise"
-          intro="Les technologies sur lesquelles je m’appuie au quotidien pour développer et livrer mes projets."
+          intro="Frontend, backend, base de données et outils : les technologies que j’utilise, regroupées par domaine."
         />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {technologies.map((technology, index) => (
-            <Reveal key={technology.name} delay={index * 50}>
-              <article className="h-full rounded-2xl glass p-5 text-center transition hover:-translate-y-1 hover:shadow-lg">
-                <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-white/70 text-3xl shadow-sm dark:bg-white/5">
-                  <TechIcon name={technology.key} colored />
-                </span>
-                <h3 className="mt-3 text-sm font-bold text-gray-900 dark:text-white">{technology.name}</h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
-                  {technology.description}
-                </p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-
-        <h3 className="mt-12 text-sm font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
-          Mes outils
-        </h3>
-        <div className="mt-4 grid gap-4 sm:grid-cols-3">
-          {tools.map((tool, index) => (
-            <Reveal key={tool.name} delay={index * 60}>
-              <article className="flex h-full items-start gap-4 rounded-2xl glass p-5 transition hover:-translate-y-0.5 hover:shadow-lg">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/70 text-2xl shadow-sm dark:bg-white/5">
-                  <TechIcon name={tool.key} colored />
-                </span>
-                <div>
-                  <h4 className="text-sm font-bold text-gray-900 dark:text-white">{tool.name}</h4>
-                  <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
-                    {tool.description}
-                  </p>
+        <div className="mt-10 space-y-4">
+          {techGroups.map((group, index) => (
+            <Reveal key={group.title} delay={index * 70}>
+              <article className="rounded-2xl glass p-6">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{group.title}</h3>
+                    <p className="mt-0.5 text-xs font-medium text-gray-500 dark:text-gray-400">
+                      {group.subtitle}
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-blue-600/10 px-2.5 py-0.5 text-[11px] font-bold text-blue-700 dark:bg-blue-500/10 dark:text-blue-300">
+                    {group.items.length} technolog{group.items.length > 1 ? 'ies' : 'ie'}
+                  </span>
                 </div>
+                <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.items.map((item) => (
+                    <li
+                      key={item.name}
+                      className="flex items-start gap-3 rounded-xl bg-white/55 p-3 ring-1 ring-black/[0.03] dark:bg-white/5 dark:ring-white/5"
+                    >
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white/80 text-xl shadow-sm dark:bg-white/10">
+                        <TechIcon name={item.key} colored />
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-gray-900 dark:text-white">{item.name}</p>
+                        <p className="mt-0.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
+                          {item.description}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </article>
             </Reveal>
           ))}

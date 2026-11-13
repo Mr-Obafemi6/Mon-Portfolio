@@ -177,18 +177,22 @@ export default function Cv() {
                 <h2 className={sectionTitle}>Compétences</h2>
                 <ul className="mt-3 space-y-2.5 text-sm text-gray-700 dark:text-gray-300">
                   <li>
-                    <strong className="font-semibold text-gray-900 dark:text-white">Web :</strong>{' '}
-                    HTML5, CSS3, JavaScript
+                    <strong className="font-semibold text-gray-900 dark:text-white">Frontend :</strong>{' '}
+                    HTML5, CSS3, JavaScript, React, Tailwind CSS, Bootstrap
+                  </li>
+                  <li>
+                    <strong className="font-semibold text-gray-900 dark:text-white">Backend :</strong>{' '}
+                    PHP, Laravel
                   </li>
                   <li>
                     <strong className="font-semibold text-gray-900 dark:text-white">
-                      Back-end & données :
+                      Base de données :
                     </strong>{' '}
-                    PHP, MySQL, Laravel
+                    MySQL, Laragon
                   </li>
                   <li>
                     <strong className="font-semibold text-gray-900 dark:text-white">Outils :</strong>{' '}
-                    {tools.map((tool) => tool.name).join(', ')}, Bootstrap
+                    {tools.map((tool) => tool.name).join(', ')}
                   </li>
                   <li>
                     <strong className="font-semibold text-gray-900 dark:text-white">
