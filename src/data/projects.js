@@ -24,7 +24,7 @@ export const projects = [
       'Interface responsive et référencement soigné',
     ],
     demo: 'https://citycenterhotel.vercel.app/',
-    github: 'https://github.com/Mr-Obafemi6/citycenterhotel',
+    github: null,
     date: 'Novembre 2026',
     category: 'web',
     featured: true,
