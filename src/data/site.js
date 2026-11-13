@@ -77,7 +77,7 @@ export const services = [
     title: 'Bases de données',
     icon: 'mysql',
     description: 'Modélisation, organisation et exploitation des données avec MySQL.',
-    techs: ['mysql', 'laragon'],
+    techs: ['mysql', 'workbench', 'laragon', 'xampp'],
   },
   {
     title: 'Interfaces responsives',
@@ -120,6 +120,23 @@ export const techGroups = [
     items: [
       { name: 'MySQL', key: 'mysql', description: 'Modélisation et requêtes SQL.' },
       { name: 'Laragon', key: 'laragon', description: 'Environnement local Apache, PHP et MySQL.' },
+      { name: 'XAMPP', key: 'xampp', description: 'Serveur local Apache, PHP et MySQL.' },
+    ],
+  },
+  {
+    title: 'Conception & modélisation',
+    subtitle: 'Structures et diagrammes avant le code',
+    items: [
+      {
+        name: 'MySQL Workbench',
+        key: 'workbench',
+        description: 'Conception et modélisation des bases de données.',
+      },
+      {
+        name: 'draw.io',
+        key: 'drawio',
+        description: 'Diagrammes de classe et cas d’utilisation.',
+      },
     ],
   },
   {

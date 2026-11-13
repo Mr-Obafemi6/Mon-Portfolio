@@ -188,7 +188,11 @@ export default function Cv() {
                     <strong className="font-semibold text-gray-900 dark:text-white">
                       Base de données :
                     </strong>{' '}
-                    MySQL, Laragon
+                    MySQL, Laragon, XAMPP
+                  </li>
+                  <li>
+                    <strong className="font-semibold text-gray-900 dark:text-white">Conception :</strong>{' '}
+                    MySQL Workbench, draw.io
                   </li>
                   <li>
                     <strong className="font-semibold text-gray-900 dark:text-white">Outils :</strong>{' '}

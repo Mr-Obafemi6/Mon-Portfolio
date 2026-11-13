@@ -11,8 +11,8 @@ import {
   DiSymfony,
   DiVisualstudio,
 } from 'react-icons/di'
-import { SiLaragon, SiReact, SiTailwindcss } from 'react-icons/si'
-import { TbBrandReactNative } from 'react-icons/tb'
+import { SiDiagramsdotnet, SiLaragon, SiReact, SiTailwindcss, SiXampp } from 'react-icons/si'
+import { TbBrandReactNative, TbDatabaseCog } from 'react-icons/tb'
 import { cn } from '../lib/styles'
 
 const icons = {
@@ -30,6 +30,9 @@ const icons = {
   bootstrap: DiBootstrap,
   tailwind: SiTailwindcss,
   laragon: SiLaragon,
+  xampp: SiXampp,
+  drawio: SiDiagramsdotnet,
+  workbench: TbDatabaseCog,
   vscode: DiVisualstudio,
 }
 
@@ -48,6 +51,9 @@ const colors = {
   bootstrap: '#7952b3',
   tailwind: '#06b6d4',
   laragon: '#0e83cd',
+  xampp: '#fb7a24',
+  drawio: '#f08705',
+  workbench: '#4479a1',
   vscode: '#007acc',
   cpp: '#00599c',
   csharp: '#239120',

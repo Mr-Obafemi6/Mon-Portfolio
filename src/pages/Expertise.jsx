@@ -60,7 +60,7 @@ export default function Expertise() {
         <SectionHeading
           kicker="03 / Boîte à outils"
           title="Technologies que j’utilise"
-          intro="Frontend, backend, base de données et outils : les technologies que j’utilise, regroupées par domaine."
+          intro="Frontend, backend, base de données, conception et outils : les technologies que j’utilise, regroupées par domaine."
         />
         <div className="mt-10 space-y-4">
           {techGroups.map((group, index) => (
