@@ -8,10 +8,11 @@ import {
   DiLaravel,
   DiMysql,
   DiPhp,
+  DiPhotoshop,
   DiSymfony,
   DiVisualstudio,
 } from 'react-icons/di'
-import { SiDiagramsdotnet, SiLaragon, SiReact, SiTailwindcss, SiXampp } from 'react-icons/si'
+import { SiDiagramsdotnet, SiLaragon, SiPhpmyadmin, SiReact, SiTailwindcss, SiXampp } from 'react-icons/si'
 import { TbBrandReactNative, TbDatabaseCog } from 'react-icons/tb'
 import { cn } from '../lib/styles'
 
@@ -31,8 +32,10 @@ const icons = {
   tailwind: SiTailwindcss,
   laragon: SiLaragon,
   xampp: SiXampp,
+  phpmyadmin: SiPhpmyadmin,
   drawio: SiDiagramsdotnet,
   workbench: TbDatabaseCog,
+  photoshop: DiPhotoshop,
   vscode: DiVisualstudio,
 }
 
@@ -52,8 +55,10 @@ const colors = {
   tailwind: '#06b6d4',
   laragon: '#0e83cd',
   xampp: '#fb7a24',
+  phpmyadmin: '#6c78af',
   drawio: '#f08705',
   workbench: '#4479a1',
+  photoshop: '#31a8ff',
   vscode: '#007acc',
   cpp: '#00599c',
   csharp: '#239120',

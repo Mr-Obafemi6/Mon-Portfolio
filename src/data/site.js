@@ -77,7 +77,7 @@ export const services = [
     title: 'Bases de données',
     icon: 'mysql',
     description: 'Modélisation, organisation et exploitation des données avec MySQL.',
-    techs: ['mysql', 'workbench', 'laragon', 'xampp'],
+    techs: ['mysql', 'phpmyadmin', 'workbench', 'laragon', 'xampp'],
   },
   {
     title: 'Interfaces responsives',
@@ -119,6 +119,7 @@ export const techGroups = [
     subtitle: 'Stockage et gestion des données',
     items: [
       { name: 'MySQL', key: 'mysql', description: 'Modélisation et requêtes SQL.' },
+      { name: 'phpMyAdmin', key: 'phpmyadmin', description: 'Administration des bases MySQL.' },
       { name: 'Laragon', key: 'laragon', description: 'Environnement local Apache, PHP et MySQL.' },
       { name: 'XAMPP', key: 'xampp', description: 'Serveur local Apache, PHP et MySQL.' },
     ],
@@ -146,6 +147,7 @@ export const techGroups = [
       { name: 'Git', key: 'git', description: 'Gestion des versions.' },
       { name: 'GitHub', key: 'github', description: 'Dépôts et collaboration.' },
       { name: 'VS Code', key: 'vscode', description: 'Éditeur de code.' },
+      { name: 'Photoshop', key: 'photoshop', description: 'Retouche d’images et création de visuels.' },
     ],
   },
 ]
