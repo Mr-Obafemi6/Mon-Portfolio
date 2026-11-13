@@ -7,6 +7,29 @@ export const projectCategories = [
 
 export const projects = [
   {
+    id: 'citycenter',
+    label: 'Site vitrine',
+    title: 'City Center Hôtel',
+    description: 'Site vitrine d’un hôtel à Cinkassé : chambres, restaurant, galerie et réservation WhatsApp.',
+    longDescription:
+      'Site vitrine du City Center Hôtel, à Cinkassé (Togo), développé avec React, Vite et Bootstrap. Il présente les chambres et suites, le restaurant, les équipements et la galerie, avec une réservation directe par WhatsApp.',
+    image: 'img/citycenter-hotel.jpeg',
+    alt: 'Capture du site City Center Hôtel',
+    tags: ['react', 'bootstrap', 'javascript', 'vite'],
+    features: [
+      'Chambres et suites présentées en détail',
+      'Restaurant et pâtisserie',
+      'Galerie photo et équipements',
+      'Réservation directe par WhatsApp',
+      'Interface responsive et référencement soigné',
+    ],
+    demo: 'https://citycenterhotel.vercel.app/',
+    github: 'https://github.com/Mr-Obafemi6/citycenterhotel',
+    date: 'Novembre 2026',
+    category: 'web',
+    featured: true,
+  },
+  {
     id: 'pchome',
     label: 'Projet e-commerce',
     title: 'PCHome',

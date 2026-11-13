@@ -197,7 +197,7 @@ export const timeline = [
 ]
 
 export const stats = [
-  { value: 6, label: 'Projets présentés' },
+  { value: 7, label: 'Projets présentés' },
   { value: technologies.length, label: 'Technologies listées' },
   { value: 1, label: 'Formation identifiée' },
 ]
