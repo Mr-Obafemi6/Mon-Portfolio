@@ -12,7 +12,7 @@ import {
   DiSymfony,
   DiVisualstudio,
 } from 'react-icons/di'
-import { SiDiagramsdotnet, SiLaragon, SiPhpmyadmin, SiReact, SiTailwindcss, SiXampp } from 'react-icons/si'
+import { SiCplusplus, SiDiagramsdotnet, SiLaragon, SiPhpmyadmin, SiReact, SiSharp, SiTailwindcss, SiVite, SiXampp } from 'react-icons/si'
 import { TbBrandReactNative, TbDatabaseCog } from 'react-icons/tb'
 import { cn } from '../lib/styles'
 
@@ -37,6 +37,9 @@ const icons = {
   workbench: TbDatabaseCog,
   photoshop: DiPhotoshop,
   vscode: DiVisualstudio,
+  cpp: SiCplusplus,
+  csharp: SiSharp,
+  vite: SiVite,
 }
 
 const colors = {
